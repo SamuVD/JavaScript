@@ -7,13 +7,13 @@ const deports = parseFloat(prompt("Escriba la nota para Deportes: "))
 const sciences = parseFloat(prompt("Escriba la nota para Ciencias: "))
 
 let ratings = [] 
-ratings.push("Calificación de Español:", spanish,
-"Calificación de Inglés:", english,
-"Calificación de Artes:", arts,
-"Calificación de Deportes:", deports,
-"Calificación de Ciencias:", sciences
-)
-console.info(ratings)
+ratings.push(spanish, "Español")
+ratings.push(english, "Inglés")
+ratings.push(arts, "Artes")
+ratings.push(deports, "Deportes")
+ratings.push(sciences, "Ciencias")
+
+console.table(ratings)
 
 //Variable que opera 
 
