@@ -2,8 +2,10 @@
 
 let fruits = ["Green Grapes", "Green Apples", "Purple Grapes", "Red Apples"]
 
+//Ciclo para recorrer la lista de frutas
+
 for (let i in fruits) {
-    console.log (fruits [i])
+    console.log (fruits[i])
 }
 
 //Variables de categorías
