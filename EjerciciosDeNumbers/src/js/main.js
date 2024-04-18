@@ -72,12 +72,12 @@ console.warn(Math.PI * Math.pow(radius, 2));
 console.groupEnd();
 
 // Exercise 11
-// console.groupCollapsed("Exercise 11");
+console.groupCollapsed("Exercise 11");
 
-// let fourSides = 10;
+let fourSides = 10;
 
-// console.warn();
-// console.groupEnd();
+console.warn(fourSides * 4);
+console.groupEnd();
 
 // Exercise 12
 console.groupCollapsed("Exercise 12");
@@ -490,25 +490,25 @@ console.groupCollapsed("Exercise 72");
 
 console.warn(
   1 +
-    2 +
-    3 +
-    4 +
-    5 +
-    6 +
-    7 +
-    8 +
-    9 +
-    10 +
-    11 +
-    12 +
-    13 +
-    14 +
-    15 +
-    16 +
-    17 +
-    18 +
-    19 +
-    20
+  2 +
+  3 +
+  4 +
+  5 +
+  6 +
+  7 +
+  8 +
+  9 +
+  10 +
+  11 +
+  12 +
+  13 +
+  14 +
+  15 +
+  16 +
+  17 +
+  18 +
+  19 +
+  20
 );
 console.groupEnd();
 
@@ -672,29 +672,29 @@ console.groupCollapsed("Exercise 96");
 
 console.error(
   1 +
-    2 +
-    3 +
-    4 +
-    5 +
-    6 +
-    7 +
-    8 +
-    9 +
-    10 +
-    11 +
-    12 +
-    13 +
-    14 +
-    15 +
-    16 +
-    17 +
-    18 +
-    19 +
-    20 +
-    21 +
-    22 +
-    23 +
-    24 +
-    25
+  2 +
+  3 +
+  4 +
+  5 +
+  6 +
+  7 +
+  8 +
+  9 +
+  10 +
+  11 +
+  12 +
+  13 +
+  14 +
+  15 +
+  16 +
+  17 +
+  18 +
+  19 +
+  20 +
+  21 +
+  22 +
+  23 +
+  24 +
+  25
 );
 console.groupEnd();
