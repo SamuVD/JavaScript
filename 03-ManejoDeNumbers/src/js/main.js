@@ -19,6 +19,8 @@
 // Nos ayuda a saber que tipo de dato es
 // console.info(Number.isInteger(myFirstNumber))
 
+
+
 // Podemos separar los números con muchos dígitos con (_) y no nos va afectar en el resultado o en la muestra de consola.
 // const number1 = 50_000_000_000_000 
 // const number2 = 50_000_000_000_000
@@ -81,34 +83,29 @@
 
 
 
-// Función para generar un número aleatorio en un rango específico
-// function generarNumeroAleatorio(min, max) {
-//     Genera un número aleatorio entre 0 (incluido) y 1 (excluido)
-//     var numeroAleatorio = Math.random()
-  
-//     Escala el número aleatorio al rango deseado
-//     La fórmula para escalar el número aleatorio es: min + (numeroAleatorio * (max - min))
-//     Esto garantiza que el número generado esté dentro del rango [min, max)
-//     var numeroEnRango = min + (numeroAleatorio * (max - min))
-  
-//     Devuelve el número aleatorio en el rango especificado
-//     return numeroEnRango
-//   }
-  
-//   Ejemplo de uso: Generar un número aleatorio entre 1 y 100
-//   var numeroAleatorio = generarNumeroAleatorio(1, 100)
-//   console.log(Number.parseInt(numeroAleatorio))
-
-
 // Opción 1 para generar un número aleatorio
 // const numberAleatory = Math.trunc(Math.random() * 100)
 // document.write(numberAleatory)
-
 
 // Opción 2
 // (ValorSuperior - ValorInferior + 1) + ValorInferior
 // const aleatoryNumberWithRange = parseInt(Math.random() * (100-50+1)+50)
 // document.write(aleatoryNumberWithRange)
+
+
+
+//#####################################
+ //CLASE MATH Y SUS METODOS MAS USADOS
+//##################################### 
+
+// console.log(Math.abs(-50))//Transforma a positivo (es la distancia entre el cero y el valor que pongamos)
+// console.log(Math.pow(2,5))//Potencia "(base,exponente")" 
+// console.log(Math.sqrt(17))//Raiz cuadrada "(numero)"
+// console.log(Math.cbrt(17))//Raiz cubica "(numero)"
+
+// console.log(Math.sign(12))//Validacion si un numero es negatio o positivo ( 1 (Positivo))
+// console.log(Math.sign(0))//Validacion si un numero es negatio o positivo ( 0 (Neutro))
+// console.log(Math.sign(-12))//Validacion si un numero es negatio o positivo (-1 (Negativo))
 
 
 
@@ -122,3 +119,4 @@
 // console.log(Math.min(1,5,3,9))
 // Para sacar la raíz cuadrada
 // Math.sqrt(45)
+//Math.pow(xx, xx) podemos exponenciar al número que queramos, siempre que llenemos los dos parámetros
