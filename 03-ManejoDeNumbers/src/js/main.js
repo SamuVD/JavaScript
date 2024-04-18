@@ -1,4 +1,4 @@
-//Conversión de números
+// Conversión de números
 // let myFirstNumber = 2
 // let mySecondNumber = "2"
 // document.write(myFirstNumber)
@@ -11,15 +11,15 @@
 
 
 // let myFirstNumber = 5
-//Para proyectar nuestras salidas de consola en la página html
+// Para proyectar nuestras salidas de consola en la página html
 // document.write(myFirstNumber)
 
-//Nos ayuda a saber que tipo de dato es
+// Nos ayuda a saber que tipo de dato es
 // console.info(typeof(myFirstNumber))
-//Nos ayuda a saber que tipo de dato es
+// Nos ayuda a saber que tipo de dato es
 // console.info(Number.isInteger(myFirstNumber))
 
-//Podemos separar los números con muchos dígitos con (_) y no nos va afectar en el resultado o en la muestra de consola.
+// Podemos separar los números con muchos dígitos con (_) y no nos va afectar en el resultado o en la muestra de consola.
 // const number1 = 50_000_000_000_000 
 // const number2 = 50_000_000_000_000
 // const number3 = 45
@@ -28,12 +28,12 @@
 // console.log(number1 - number2)
 // console.log(number1 * number2)
 // console.log(number1 / number2)
-//Con estas propiedades podemos saber si un número es finito.
+// Con estas propiedades podemos saber si un número es finito.
 // console.log(Number.isFinite(number3))
-//Con estas propiedades traemos el número más grande de Js y el más pequeño.
+// Con estas propiedades traemos el número más grande de Js y el más pequeño.
 // console.log(Number.MAX_VALUE)
 // console.log(Number.MIN_VALUE)
-//Para traer el número PI
+// Para traer el número PI
 // console.log(Math.PI)
 
 
@@ -55,7 +55,7 @@
 // const example = 5.12
 // document.write(example)
 
-//Fuerza la cantidad de decimales que quiero sacar de un número
+// Fuerza la cantidad de decimales que quiero sacar de un número
 // console.log(example.toFixed())
 // console.log(example.toFixed(1))
 // console.log(example.toFixed(2))
@@ -100,13 +100,13 @@
 //   console.log(Number.parseInt(numeroAleatorio))
 
 
-//Opción 1 para generar un número aleatorio
+// Opción 1 para generar un número aleatorio
 // const numberAleatory = Math.trunc(Math.random() * 100)
 // document.write(numberAleatory)
 
 
-//Opción 2
-//(ValorSuperior - ValorInferior + 1) + ValorInferior
+// Opción 2
+// (ValorSuperior - ValorInferior + 1) + ValorInferior
 // const aleatoryNumberWithRange = parseInt(Math.random() * (100-50+1)+50)
 // document.write(aleatoryNumberWithRange)
 
