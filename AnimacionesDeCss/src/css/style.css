@@ -1,3 +1,78 @@
 /*
 Animaciones en CSS
+FUncionan de dos maneras: 
+1- Las transiciones / Requieren que el usurario interactue. 
+Funcionan con accionadores como: active o hover.
+2- Las animaciones / No requieren interacción, cargan por si solas
 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    border-radius: 50%;
+    /* transition: background linear 2s; */
+    /* animation: ; */
+    animation-name: changeColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* .circle:active {
+    background-color: red;
+} */
+
+@keyframes changeColor {
+    0% {
+        background-color: blueviolet;
+    }
+    50% {
+        background-color: darkorange;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+.circle2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    border-radius: 50%;
+    /* transition: background linear 2s; */
+    animation: 10s changePosition infinite; 
+}
+
+@keyframes changePosition {
+    0% {
+        transform: translate(0%);
+        background-color: gold;
+    }
+    25% {
+        transform: translate(100%);
+        background-color: deeppink;
+    }
+    50% {
+        transform: translate(100%, 100%);
+        background-color: crimson;
+    }
+    75% {
+        transform: translate(0%,100%);
+        background-color: lawngreen;
+    }
+    /* 95% {
+        transform: translate(100%,100%);
+        background-color: lawngreen;
+    } */
+}
