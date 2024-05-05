@@ -1,159 +1,204 @@
 const section = document.querySelector(".section-contenedor");
-const div = document.createElement("div")
+let div = document.createElement("div");
 
-  // Arreglo de mascotas
-  let petsArray = [
-    {
-      id:1,
-      name: "zeus",
-      specie: "canino",
-      breed: "Rottweiler",
-      weight: 36,
-      age: searchPetsDateOfBirth("12/29/2020"),
-      status: "estable",
-      ownersName: "samuel villarreal",
-      typeOwnersId: "cc",
-      ownersIdNumber: "1038867696",
-      ownersCellPhoneNumber: "3135664514",
-      ownersMail: "samvillarreal@gmail.com",
-      img: "https://mivet.com/hubfs/shutterstock_590291273.jpg"
-    },
-    {
-      id:2,
-      name: "roger",
-      specie: "canino",
-      breed: "san bernardo",
-      weight: 30,
-      age: searchPetsDateOfBirth("01/15/2022"),
-      status: "estable",
-      ownersName: "sofia uribe",
-      typeOwnersId: "cc",
-      ownersIdNumber: "5559936741",
-      ownersCellPhoneNumber: "3157559669",
-      ownersMail: "uribesofi@gmail.com",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rey_nieve.jpg/640px-Rey_nieve.jpg"
-    },
-    {
-      id:3,
-      name: "tokio",
-      specie: "canino",
-      breed: "french bulldog",
-      weight: 22,
-      age: searchPetsDateOfBirth("07/20/2023"),
-      status: "estable",
-      ownersName: "diego cataño",
-      typeOwnersId: "cc",
-      ownersIdNumber: "2000364590",
-      ownersCellPhoneNumber: "3219862545",
-      ownersMail: "catañito@gmail.com",
-      img: "https://tomkingskennel.com/wp-content/uploads/2020/04/Photo-2020.-03.-29.-18-24-21-e1586436552477.jpg"
-    },
-    {
-      name: "pumba",
-      specie: "canino",
-      breed: "bulldog",
-      weight: 20,
-      age: searchPetsDateOfBirth("08/17/2019"),
-      status: "critico",
-      ownersName: "jose hurtado",
-      typeOwnersId: "cc",
-      ownersIdNumber: "1533648020",
-      ownersCellPhoneNumber: "3007893663",
-      ownersMail: "hurtado@gmail.com",
-      img: "https://www.dondemiveterinario.com/wp-content/uploads/2020/05/perro-bulldog-ingles.jpg"
-    },
-    {
-      name: "lupe",
-      specie: "canino",
-      breed: "cockapoo",
-      weight: 13,
-      age: searchPetsDateOfBirth("09/20/2022"),
-      status: "estable",
-      ownersName: "jose hurtado",
-      typeOwnersId: "cc",
-      ownersIdNumber: "1533648020",
-      ownersCellPhoneNumber: "3007893663",
-      ownersMail: "hurtado@gmail.com",
-      img: "https://smylepets.com/wp-content/uploads/2022/03/cockapoo-adulto.jpg"
-    },
-    {
-      name: "ricardo",
-      specie: "canino",
-      breed: "labradoodle",
-      weight: 30,
-      age: searchPetsDateOfBirth("05/30/2021"),
-      status: "estable",
-      ownersName: "samuel villarreal",
-      typeOwnersId: "cc",
-      ownersIdNumber: "1038867696",
-      ownersCellPhoneNumber: "3135664514",
-      ownersMail: "samvillarreal@gmail.com",
-      img: "https://www.hundeo.com/wp-content/uploads/2021/10/Labradoodle-Garten.jpeg"
-    },
-    {
-      name: "bills",
-      specie: "felino",
-      breed: "gato sphynx",
-      weight: 11,
-      age: searchPetsDateOfBirth("01/01/2024"),
-      status: "estable",
-      ownersName: "dayhana restrepo",
-      typeOwnersId: "cc",
-      ownersIdNumber: "2649853027",
-      ownersCellPhoneNumber: "3156644554",
-      ownersMail: "dayharestrepo@gmail.com",
-      img: "https://www.gatoexotico.com/wp-content/uploads/2020/04/nature-2808276_640.jpg"
-    },
-    {
-      name: "victorino",
-      specie: "canino",
-      breed: "teckel",
-      weight: 19,
-      age: searchPetsDateOfBirth("11/09/2022"),
-      status: "critico",
-      ownersName: "mario alfonso",
-      typeOwnersId: "cc",
-      ownersIdNumber: "6995461032",
-      ownersCellPhoneNumber: "3018557478",
-      ownersMail: "mario@gmail.com",
-      img: "https://blog.dogfydiet.com/wp-content/uploads/2023/09/Teckel-Pelo-duro-2.jpg"
-    },
-    {
-      name: "albeiro",
-      specie: "felino",
-      breed: "gato persa",
-      weight: 13,
-      age: searchPetsDateOfBirth("11/09/2023"),
-      status: "estable",
-      ownersName: "samuel villarreal",
-      typeOwnersId: "cc",
-      ownersIdNumber: "1038867696",
-      ownersCellPhoneNumber: "3135664514",
-      ownersMail: "samvillarreal@gmail.com",
-      img: "https://www.santevet.es/uploads/images/es_ES/razas/un_gato_persa.jpeg"
-    },
-    {
-      name: "perla",
-      specie: "felino",
-      breed: "siamés",
-      weight: 10,
-      age: searchPetsDateOfBirth("10/25/2024"),
-      status: "estable",
-      ownersName: "valentina arboleda",
-      typeOwnersId: "cc",
-      ownersIdNumber: "5957648123",
-      ownersCellPhoneNumber: "3024458998",
-      ownersMail: "arboledavalen@yahoo.com",
-      img: "https://clinicaveterinarium.es/wp-content/uploads/2023/11/lindo-gatito-gato-siames-interior.jpg"
 
-    },
-  ];
+// Arreglo de mascotas
+let petsArray = [
+  {
+    id: 1,
+    name: "zeus",
+    specie: "canino",
+    breed: "Rottweiler",
+    weight: 36,
+    age: searchPetsDateOfBirth("12/29/2020"),
+    status: "estable",
+    ownersName: "samuel villarreal",
+    typeOwnersId: "cc",
+    ownersIdNumber: "1038867696",
+    ownersCellPhoneNumber: "3135664514",
+    ownersMail: "samvillarreal@gmail.com",
+    img: "https://mivet.com/hubfs/shutterstock_590291273.jpg",
+  },
+  {
+    id: 2,
+    name: "roger",
+    specie: "canino",
+    breed: "san bernardo",
+    weight: 30,
+    age: searchPetsDateOfBirth("01/15/2022"),
+    status: "estable",
+    ownersName: "sofia uribe",
+    typeOwnersId: "cc",
+    ownersIdNumber: "5559936741",
+    ownersCellPhoneNumber: "3157559669",
+    ownersMail: "uribesofi@gmail.com",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rey_nieve.jpg/640px-Rey_nieve.jpg",
+  },
+  {
+    id: 3,
+    name: "tokio",
+    specie: "canino",
+    breed: "french bulldog",
+    weight: 22,
+    age: searchPetsDateOfBirth("07/20/2023"),
+    status: "estable",
+    ownersName: "diego cataño",
+    typeOwnersId: "cc",
+    ownersIdNumber: "2000364590",
+    ownersCellPhoneNumber: "3219862545",
+    ownersMail: "catañito@gmail.com",
+    img: "https://tomkingskennel.com/wp-content/uploads/2020/04/Photo-2020.-03.-29.-18-24-21-e1586436552477.jpg",
+  },
+  {
+    name: "pumba",
+    specie: "canino",
+    breed: "bulldog",
+    weight: 20,
+    age: searchPetsDateOfBirth("08/17/2019"),
+    status: "critico",
+    ownersName: "jose hurtado",
+    typeOwnersId: "cc",
+    ownersIdNumber: "1533648020",
+    ownersCellPhoneNumber: "3007893663",
+    ownersMail: "hurtado@gmail.com",
+    img: "https://www.dondemiveterinario.com/wp-content/uploads/2020/05/perro-bulldog-ingles.jpg",
+  },
+  {
+    name: "lupe",
+    specie: "canino",
+    breed: "cockapoo",
+    weight: 13,
+    age: searchPetsDateOfBirth("09/20/2022"),
+    status: "estable",
+    ownersName: "jose hurtado",
+    typeOwnersId: "cc",
+    ownersIdNumber: "1533648020",
+    ownersCellPhoneNumber: "3007893663",
+    ownersMail: "hurtado@gmail.com",
+    img: "https://smylepets.com/wp-content/uploads/2022/03/cockapoo-adulto.jpg",
+  },
+  {
+    name: "ricardo",
+    specie: "canino",
+    breed: "labradoodle",
+    weight: 30,
+    age: searchPetsDateOfBirth("05/30/2021"),
+    status: "estable",
+    ownersName: "samuel villarreal",
+    typeOwnersId: "cc",
+    ownersIdNumber: "1038867696",
+    ownersCellPhoneNumber: "3135664514",
+    ownersMail: "samvillarreal@gmail.com",
+    img: "https://www.hundeo.com/wp-content/uploads/2021/10/Labradoodle-Garten.jpeg",
+  },
+  {
+    name: "bills",
+    specie: "felino",
+    breed: "gato sphynx",
+    weight: 11,
+    age: searchPetsDateOfBirth("01/01/2024"),
+    status: "estable",
+    ownersName: "dayhana restrepo",
+    typeOwnersId: "cc",
+    ownersIdNumber: "2649853027",
+    ownersCellPhoneNumber: "3156644554",
+    ownersMail: "dayharestrepo@gmail.com",
+    img: "https://www.gatoexotico.com/wp-content/uploads/2020/04/nature-2808276_640.jpg",
+  },
+  {
+    name: "victorino",
+    specie: "canino",
+    breed: "teckel",
+    weight: 19,
+    age: searchPetsDateOfBirth("11/09/2022"),
+    status: "critico",
+    ownersName: "mario alfonso",
+    typeOwnersId: "cc",
+    ownersIdNumber: "6995461032",
+    ownersCellPhoneNumber: "3018557478",
+    ownersMail: "mario@gmail.com",
+    img: "https://blog.dogfydiet.com/wp-content/uploads/2023/09/Teckel-Pelo-duro-2.jpg",
+  },
+  {
+    name: "albeiro",
+    specie: "felino",
+    breed: "gato persa",
+    weight: 13,
+    age: searchPetsDateOfBirth("11/09/2023"),
+    status: "estable",
+    ownersName: "samuel villarreal",
+    typeOwnersId: "cc",
+    ownersIdNumber: "1038867696",
+    ownersCellPhoneNumber: "3135664514",
+    ownersMail: "samvillarreal@gmail.com",
+    img: "https://www.santevet.es/uploads/images/es_ES/razas/un_gato_persa.jpeg",
+  },
+  {
+    name: "perla",
+    specie: "felino",
+    breed: "siamés",
+    weight: 10,
+    age: searchPetsDateOfBirth("10/25/2024"),
+    status: "estable",
+    ownersName: "valentina arboleda",
+    typeOwnersId: "cc",
+    ownersIdNumber: "5957648123",
+    ownersCellPhoneNumber: "3024458998",
+    ownersMail: "arboledavalen@yahoo.com",
+    img: "https://clinicaveterinarium.es/wp-content/uploads/2023/11/lindo-gatito-gato-siames-interior.jpg",
+  },
+];
+
+function nav() {
+  for (let i = 0; i < petsArray.length; i++) {
+    div.innerHTML += ` 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button> 
+      </form>
+    </div>
+  </div>
+</nav>
+  `;
+  }
+}
+
+nav();
 
 function pintar() {
-  div.innerHTML=""
-  for (let i = 0; i < petsArray.length; i++){
-    div.innerHTML += (`
-      <div class="card" style="width: 20.063rem;">
+  div.innerHTML = "";
+  for (let i = 0; i < petsArray.length; i++) {
+    div.innerHTML += `
+    <div class="card" style="width: 20.063rem;">
           <img src="${petsArray[i].img}" style="width: 20rem; height: 250px " class="card-img-top " alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">${petsArray[i].name}</h5>
@@ -165,10 +210,24 @@ function pintar() {
            <button type="button" onclick="deletePet(${petsArray[i].id})" class="btn btn-danger">Eliminar</button>
         </div>
       </div>
-  `)
+  `;
   }
 }
 pintar();
+
+function footer() {
+  footer.innerHTML += `
+  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </div>
+  `
+}
+footer()
 
 // function printCards() {
 //   div.innerHTML = ""
@@ -191,9 +250,21 @@ pintar();
 // printCards();
 
 section.appendChild(div);
-section.classList.add("container","d-flex", "flex","justify-content-center", "align-items-center", "gap-3")
-div.classList.add("d-flex","flex-wrap","justify-content-center", "align-items-center", "gap-5")
-
+section.classList.add(
+  "container",
+  "d-flex",
+  "flex",
+  "justify-content-center",
+  "align-items-center",
+  "gap-3"
+);
+div.classList.add(
+  "d-flex",
+  "flex-wrap",
+  "justify-content-center",
+  "align-items-center",
+  "gap-5"
+);
 
 // Variables para actualizar datos
 // let registeredPets = [];
@@ -333,7 +404,7 @@ function searchPetsDateOfBirth(birthday) {
 //   return console.log(arrayOfOwners);
 // }
 
-// // Función para buscar a una mascota por su nombre
+// Función para buscar a una mascota por su nombre
 // function lookingForAPet() {
 //   let findNamePet = prompt(
 //     "Ingresa el nombre de la mascota que deseas buscar:"
@@ -342,6 +413,8 @@ function searchPetsDateOfBirth(birthday) {
 //     return findNamePet === pet.name;
 //   });
 //   console.table(infoPet);
+//   nav();
+  
 // }
 
 // // Función para mostrar todas las mascotas pertenecientes a un mismo amo
@@ -387,14 +460,14 @@ function searchPetsDateOfBirth(birthday) {
 //       pintar()
 //     }
 //   }
-  
+
 // }
 
 function deletePet(pets) {
   for (let i = 0; i < petsArray.length; i++) {
-      if (pets === petsArray[i].id) {
-          petsArray.splice([i],1);
-          pintar()
-      }
+    if (pets === petsArray[i].id) {
+      petsArray.splice([i], 1);
+      pintar();
+    }
   }
-};
+}
