@@ -1,0 +1,7 @@
+Some Methods
+
+GET => traer informacion
+POST => guardar informacion
+PUT => actualizar informacion
+PATCH => actualiza un dato puntualmente
+DELETE => eliminar
