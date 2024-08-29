@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "83ec",
+      "userName": "joan",
+      "lastName": "zapato",
+      "email": "aeirfnren@gmail.com",
+      "password": "papapap"
+    },
+    {
+      "id": "b3b3",
+      "userName": "w",
+      "lastName": "w",
+      "email": "w@gmi.com",
+      "password": "w"
+    },
+    {
+      "id": "5c2e",
+      "userName": "b",
+      "lastName": "b",
+      "email": "rftv@gmail.com",
+      "password": "lll"
+    },
+    {
+      "id": "4732",
+      "userName": "sd",
+      "lastName": "ds",
+      "email": "dsd@gmail.com",
+      "password": "asd"
+    }
+  ]
+}
